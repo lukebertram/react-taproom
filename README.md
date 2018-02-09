@@ -16,6 +16,14 @@ This project uses React to build a component-based application for tracking deta
 
 My initial response to the prompt provided was to clone my Angular taproom project from github and take a look at it. After running `npm install`, I tried to run `ng serve` but the process stalled out when it could not find JQuery in the node_modules. I installed JQuery using `npm i jquery` and met with another error. The build process now could not find an installation of 'Tether' in the node_modules folder. I couldn't remember ever having to install tether for this project (or any angular project) in the past, but installing this project dependency seemed to be the last piece of the puzzle. Afterwards my Angular version of the taproom compiled and served properly.
 
+**Unforeseen issue No. 2: Multiple routes required/not required**
+
+In my original Angular taproom application everything lived on a single page with a single route. No routing was necessary for that project. If I were to merely copy that project, I wouldn't use a router in this React version either. However one of the project objectives listed in Epicenter reads as follows:
+
+>Application successfully uses client-side routing via the React-Router library to create appearance of multiple pages.
+
+I'm hoping that the presence of the Error404 component on any undefined routes will fulfill this objective to my instructor's satisfaction. If it doesn't, I may have to deviate from the original Angular app's structure by breaking the New Tap Form component out into its own route.
+
 ### Requirements From Angular Taproom Project
 
 - [ ] As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
