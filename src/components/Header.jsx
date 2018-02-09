@@ -2,9 +2,15 @@ import React from 'react';
 
 function Header(){
   return(
-    <div>
+    <header>
       <h1>Header works</h1>
-    </div>
+      <style jsx>{`
+        header{
+          height: 85px;
+          background-color: #ccc;
+        }
+      `}</style>
+    </header>
   );
 }
 

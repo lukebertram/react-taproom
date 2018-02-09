@@ -3,49 +3,59 @@ import Tap from './Tap';
 
 const kegs = [
   {
-    name: "Dragon's Breath",
+    name: 'Dragon\'s Breath',
     price: 10,
-    brewery: "Spielburg Brewery",
+    brewery: 'Spielburg Brewery',
     alcoholContent: 500,
     pintsRemaining: 124
   },
   {
-    name: "Butterbeer",
+    name: 'Butterbeer',
     price: 5,
-    brewery: "Hogwarts Cellars",
+    brewery: 'Hogwarts Cellars',
     alcoholContent: 0,
     pintsRemaining: 124
   },
   {
-    name: "Motor Oil",
+    name: 'Motor Oil',
     price: 7,
-    brewery: "Mobil",
+    brewery: 'Mobil',
     alcoholContent: 0,
     pintsRemaining: 124
   },
   {
-    name: "Total Domination IPA",
+    name: 'Total Domination IPA',
     price: 5,
-    brewery: "Ninkasi",
+    brewery: 'Ninkasi',
     alcoholContent: 6.7,
     pintsRemaining: 124
   },
 
-]
+];
 
 function TapList(){
   return(
-    <div>
+    <div className='container'>
       <h1>TapList</h1>
-      {kegs.map((keg, index) =>
-        <Tap
-          name={keg.name}
-          brewery={keg.brewery}
-          price={keg.price}
-          alcoholContent={keg.alcoholContent}
-          pintsRemaining={keg.pintsRemaining}
-          key={index}/>
-      )}
+      <div className='taplist'>
+        {kegs.map((keg, index) =>
+          <Tap
+            name={keg.name}
+            brewery={keg.brewery}
+            price={keg.price}
+            alcoholContent={keg.alcoholContent}
+            pintsRemaining={keg.pintsRemaining}
+            key={index}/>
+        )}
+      </div>
+      <style jsx>{`
+        h1{
+          margin: 10px;
+        }
+        .taplist{
+          display: flex;
+        }
+      `}</style>
     </div>
   );
 }
