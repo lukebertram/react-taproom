@@ -4,7 +4,10 @@
   "description": "A React application for tracking details about the kegs on tap at a taproom",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "lint": "eslint src/** src/**/**; exit 0",
+    "lint-fix": "eslint src/** src/**/** --fix; exit 0"
   },
   "repository": {
     "type": "git",
@@ -39,5 +42,4 @@
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.5.0"
   }
-}
 }
