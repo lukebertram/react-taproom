@@ -13,7 +13,6 @@ function App(){
           padding: 0;
           box-sizing: border-box;
           font-family: Helvetica, arial, sans-serif;
-
         }
         body{
           color: #333;

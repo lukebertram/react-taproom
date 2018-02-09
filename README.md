@@ -41,7 +41,7 @@ In my original Angular taproom application everything lived on a single page wit
 
 I'm hoping that the presence of the Error404 component on any undefined routes will fulfill this objective to my instructor's satisfaction. If it doesn't, I may have to deviate from the original Angular app's structure by breaking the New Tap Form component out into its own route.
 
-### Requirements From Angular Taproom Project
+## Requirements From Angular Taproom Project
 
 - [ ] As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
 
