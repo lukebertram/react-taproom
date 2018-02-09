@@ -8,6 +8,23 @@
 
 This project uses React to build a component-based application for tracking details about the kegs on tap at a local taproom. Currently, this is just a static layout for the project. It will eventually allow for users to add, edit, and/or remove kegs.
 
+**Angular vs React Process**
+
+So far I've noticed 2 primary differences between building out this app in React and Angular:
+1. **More Components** - Components in React seem to be far more granular in their purpose - so there are more of them. In my original Angular taproom app, the entire thing was housed inside a single component with a substantial view template. In the React version, that same template is broken into JSX and housed in many discrete components.
+
+2. **Static First** - Following the process described in *[Thinking in React](https://reactjs.org/docs/thinking-in-react.html)*, the first step to building this application in React involves making a static layout with hard-coded data and no interactivity. Alternatively, when building the taproom in Angular, even the way elements were included in the view was dependent on data bindings. Functionality of UI elements was often added at the same time the element itself was added to the UI.
+
+## Setup Instructions
+
+Clone from [github](https://github.com/lukebertram/react-taproom) and run the following commands in the project's root directory:
+```
+$ npm install
+$ npm start
+```
+
+Then, visit `localhost:8080` in your browser
+
 ### Component Tree
 ![Component Tree](component-tree.jpg)
 
