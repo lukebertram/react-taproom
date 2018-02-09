@@ -7,25 +7,47 @@ function Tap(props){
       <div className='title'>
         <h2>{props.name}</h2>
       </div>
-      <div className='body'>
-        <p>${props.price}</p>
-        <p>{props.brewery}</p>
-        <p>{props.alcoholContent}% ABV</p>
-        <p>{props.pintsRemaining}</p>
+      <div className='tap-body'>
+        <div className='tap-info'>
+          <p>${props.price}</p>
+          <p>{props.brewery}</p>
+          <p>{props.alcoholContent}% ABV</p>
+          <p>{props.pintsRemaining}</p>
+        </div>
+        <div className='tap-buttons'>
+          <button className='pour-pint'>Pour Pint</button>
+          <button className='edit-tap'>Edit</button>
+        </div>
       </div>
       <style jsx>{`
         .tap{
           background-color: #ccc;
           margin: 10px;
           width: 30%;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          min-width: 300px;
         }
         .title{
+          border-radius: 5px 5px 0 0;
           background-color: #555;
           color: #fff;
           padding: 10px;
         }
-        .body{
+        .tap-body{
+          flex: 1;
           padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .tap-buttons{
+          display: flex;
+          flex-direction: column;
+        }
+        button{
+          flex: 1;
         }
       `}</style>
     </div>

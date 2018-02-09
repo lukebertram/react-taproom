@@ -48,12 +48,17 @@ function TapList(){
             key={index}/>
         )}
       </div>
+      <button>Tap New Keg</button>
       <style jsx>{`
         h1{
           margin: 10px;
         }
         .taplist{
           display: flex;
+          flex-wrap: wrap;
+        }
+        button{
+
         }
       `}</style>
     </div>
