@@ -1,0 +1,19 @@
+{
+  "name": "taproom",
+  "version": "1.0.0",
+  "description": "A React application for tracking details about the kegs on tap at a taproom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukebertram/react-taproom.git"
+  },
+  "author": "Luke Bertram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukebertram/react-taproom/issues"
+  },
+  "homepage": "https://github.com/lukebertram/react-taproom#readme"
+}
