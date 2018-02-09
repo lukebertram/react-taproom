@@ -3,7 +3,7 @@ import Tap from './Tap';
 
 const kegs = [
   {
-    name: "Draon's Breath",
+    name: "Dragon's Breath",
     price: 10,
     brewery: "Spielburg Brewery",
     alcoholContent: 500,

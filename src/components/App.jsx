@@ -8,7 +8,12 @@ function App(){
   return(
     <div>
       <style global jsx>{`
-        
+        html, body, div, h1, h2, p, ul, ol, li{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: Helvetica, arial, sans-serif;
+        }
       `}</style>
       <Header/>
       <Switch>
