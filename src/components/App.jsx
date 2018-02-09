@@ -6,6 +6,7 @@ function App(){
   return(
     <Switch>
       <Route exact path='/' component={Test} />
+      <Route component={Error404} />
     </Switch>
   );
 }
