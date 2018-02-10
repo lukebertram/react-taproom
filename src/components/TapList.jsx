@@ -1,5 +1,7 @@
 import React from 'react';
 import Tap from './Tap';
+import NewTapForm from './NewTapForm';
+import EditTapForm from './EditTapForm';
 
 const kegs = [
   {
@@ -49,9 +51,13 @@ function TapList(){
         )}
       </div>
       <button>Tap New Keg</button>
+      <NewTapForm/>
+      <EditTapForm/>
       <style jsx>{`
+        .container{
+          padding: 10px;
+        }
         h1{
-          margin: 10px;
         }
         .taplist{
           display: flex;
