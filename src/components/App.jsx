@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import TapList from './TapList';
+import Login from './Login';
 import Error404 from './Error404';
 
 function App(){
@@ -21,6 +22,7 @@ function App(){
       <Header/>
       <Switch>
         <Route exact path='/' component={TapList} />
+        <Route path='/login' component={Login} />
         <Route component={Error404} />
       </Switch>
     </div>
