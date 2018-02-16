@@ -23,14 +23,17 @@ class Admin extends React.Component {
         <EditTapForm />
         <NewTapForm />
         <AddNewTapButton />
-        <TapList />
+        <TapList
+          tapList={this.props.tapList}
+          currentRouterPath={this.props.currentRouterPath} />
       </div>
     );
   }
 }
 
 Admin.propTypes = {
-  tapList: PropTypes.object
+  tapList: PropTypes.array,
+  currentRouterPath: PropTypes.string.isRequired
 };
 
 export default Admin;
