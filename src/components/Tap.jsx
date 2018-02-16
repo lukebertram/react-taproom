@@ -2,6 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Tap(props){
+  let tapControlButtons = null;
+  if (props.currentRouterPath === '/admin'){
+    tapControlButtons =
+      <div className='tap-buttons'>
+        <button className='pour-pint'>Pour Pint</button>
+        <button className='edit-tap'>Edit</button>
+      </div>;
+  }
   return(
     <div className='tap'>
       <div className='title'>
@@ -14,10 +22,7 @@ function Tap(props){
           <p>{props.alcoholContent}% ABV</p>
           <p>{props.pintsRemaining}</p>
         </div>
-        <div className='tap-buttons'>
-          <button className='pour-pint'>Pour Pint</button>
-          <button className='edit-tap'>Edit</button>
-        </div>
+        {tapControlButtons}
       </div>
       <style jsx>{`
         .tap{
