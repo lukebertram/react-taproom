@@ -11,6 +11,7 @@ function Header(){
       <ul className='nav'>
         <li><Link style={link} to='/'><a>Home</a></Link></li>
         <li><Link style={link} to='/login'><a>Login</a></Link></li>
+        <li><Link style={link} to='/admin'><a>Admin</a></Link></li>
       </ul>
       <style jsx>{`
         header{
