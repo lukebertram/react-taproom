@@ -10,6 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      selectedTap: null,
       masterTapList: [
         {
           name: 'Dragon\'s Breath',
@@ -69,6 +70,7 @@ class App extends React.Component {
             render={(props)=>
               <Admin
                 tapList={this.state.masterTapList}
+                selectedTap={this.state.selectedTap}
                 currentRouterPath={props.location.pathname} />} />
           <Route path='/login' component={Login} />
           <Route component={Error404} />
