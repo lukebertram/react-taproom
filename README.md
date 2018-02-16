@@ -25,8 +25,20 @@ $ npm start
 
 Then, visit `localhost:8080` in your browser
 
-### Component Tree
+### Original Stateless Component Tree
 ![Component Tree](component-tree.jpg)
+
+### Changes to Component Tree
+Given what I now know about adding state to a React application and how an "/admin" route may be implemented, it seemed prudent to update the component tree that would represent my application.
+
+The components for altering any information about kegs should be available only on an employee-specific route (/admin), while only the display of keg information should be available on the public tap list (which I've placed at the root route). Because of these requirements, my new admin path tree looks almost identical to the old root path tree (with several of the necessary CRUD components for altering tap information), while the new root path tree is a very stripped-down version of the same that includes only the tap list and the individual taps to be displayed.
+
+Application state (green in the diagram) will be held in the App component and passed down as props to both the TapList component at the root route and the Admin component at the admin route.
+
+The Admin component will also be a class-based component so that it may hold state information regarding the hiding and showing of forms - information that will not be required in any other part of the application.
+
+### New Stateful Component Tree With Admin Route
+![Stateful Component Tree](new-tree.jpg)
 
 ### Notes
 **Unforeseen issue No. 1: Angular tap room would not run.**
