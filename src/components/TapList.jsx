@@ -18,7 +18,6 @@ function TapList(props){
             key={index}/>
         )}
       </div>
-      <button>Tap New Keg</button>
       <style jsx>{`
         .container{
           padding: 10px;
@@ -28,9 +27,6 @@ function TapList(props){
         .taplist{
           display: flex;
           flex-wrap: wrap;
-        }
-        button{
-
         }
       `}</style>
     </div>
