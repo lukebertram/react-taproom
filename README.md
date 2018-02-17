@@ -1,12 +1,12 @@
 # React Taproom
 
-#### A React application for tracking details about the kegs on tap at a taproom, February 9th, 2018
+#### A React application for tracking details about the kegs on tap at a taproom, February 16th, 2018
 
 #### By **Luke Bertram**
 
 ## Description
 
-This project uses React to build a component-based application for tracking details about the kegs on tap at a local taproom. Currently, this is just a static layout for the project. It will eventually allow for users to add, edit, and/or remove kegs.
+This project uses React to build a component-based application for tracking details about the kegs on tap at a local taproom. It currently allows for users with access to the admin route (everyone, since there are no validations as yet) to add additional taps to the displayed list by submitting a form with the necessary information about the new tap.
 
 **Angular vs React Process**
 
