@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function AddNewTapButton(){
+function AddNewTapButton(props){
   return(
-    <button>Add New Tap</button>
+    <button onClick={props.onAddNewTapClick}>Add New Tap</button>
   );
+}
+
+AddNewTapButton.propTypes = {
+  onAddNewTapClick: PropTypes.func
 }
 
 export default AddNewTapButton;

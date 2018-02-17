@@ -10,19 +10,41 @@ class Admin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showNewTapForm: false,
-      showEditTapForm: false
+      newTapFormVisible: false,
+      editTapFormVisible: false
     }
+    this.handleAddNewTapClick = this.handleAddNewTapClick.bind(this);
+    this.handleNewTapFormSubmissionHide = this.handleNewTapFormSubmissionHide.bind(this);
+  }
+
+  handleAddNewTapClick() {
+    console.log(`ADD NEW TAP BUTTON CLICKED`)
+    this.setState({newTapFormVisible: true});
+  }
+
+  handleNewTapFormSubmissionHide() {
+    this.setState({newTapFormVisible: false});
   }
 
   render(){
+    let newTapForm = null;
+    if (this.state.newTapFormVisible){
+      newTapForm =
+      <NewTapForm
+        onNewTapFormSubmissionHide={this.handleNewTapFormSubmissionHide}/>;
+    }
+    let editTapForm = null;
+    if (this.state.editTapFormVisible){
+      editTapForm = <EditTapForm />;
+    }
 
     return(
       <div>
         <h2>Admin Component</h2>
-        <EditTapForm />
-        <NewTapForm />
-        <AddNewTapButton />
+        {editTapForm}
+        {newTapForm}
+        <AddNewTapButton
+          onAddNewTapClick={this.handleAddNewTapClick}/>
         <TapList
           tapList={this.props.tapList}
           currentRouterPath={this.props.currentRouterPath} />
@@ -33,6 +55,7 @@ class Admin extends React.Component {
 
 Admin.propTypes = {
   tapList: PropTypes.array,
+  selectedTap: PropTypes.string,
   currentRouterPath: PropTypes.string.isRequired
 };
 
