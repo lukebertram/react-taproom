@@ -7,8 +7,8 @@ import Login from './Login';
 import Error404 from './Error404';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       selectedTap: null,
       masterTapList: [
@@ -41,7 +41,7 @@ class App extends React.Component {
           pintsRemaining: 124
         }
       ]
-    }
+    };
     this.handleAddNewTapToList = this.handleAddNewTapToList.bind(this);
   }
 
@@ -69,7 +69,7 @@ class App extends React.Component {
         <Switch>
           <Route
             exact path='/'
-            render={(props)=>
+            render={()=>
               <TapList
                 tapList={this.state.masterTapList}/>} />
           <Route

@@ -17,7 +17,7 @@ function NewTapForm(props){
         alcoholContent: parseFloat(_alcoholContent.value),
         pintsRemaining: 124
       }
-    )
+    );
     _name.value = '';
     _price.value = '';
     _brand.value = '';
@@ -67,6 +67,6 @@ function NewTapForm(props){
 NewTapForm.propTypes = {
   onAddNewTapToList: PropTypes.func,
   onNewTapFormSubmissionHide: PropTypes.func
-}
+};
 
 export default NewTapForm;

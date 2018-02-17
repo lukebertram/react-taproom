@@ -12,13 +12,13 @@ class Admin extends React.Component {
     this.state = {
       newTapFormVisible: false,
       editTapFormVisible: false
-    }
+    };
     this.handleAddNewTapClick = this.handleAddNewTapClick.bind(this);
     this.handleNewTapFormSubmissionHide = this.handleNewTapFormSubmissionHide.bind(this);
   }
 
   handleAddNewTapClick() {
-    console.log(`ADD NEW TAP BUTTON CLICKED`)
+
     this.setState({newTapFormVisible: true});
   }
 
@@ -30,9 +30,9 @@ class Admin extends React.Component {
     let newTapForm = null;
     if (this.state.newTapFormVisible){
       newTapForm =
-      <NewTapForm
-        onAddNewTapToList={this.props.onAddNewTapToList}
-        onNewTapFormSubmissionHide={this.handleNewTapFormSubmissionHide}/>;
+        <NewTapForm
+          onAddNewTapToList={this.props.onAddNewTapToList}
+          onNewTapFormSubmissionHide={this.handleNewTapFormSubmissionHide}/>;
     }
     let editTapForm = null;
     if (this.state.editTapFormVisible){

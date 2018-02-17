@@ -36,6 +36,6 @@ function TapList(props){
 TapList.propTypes = {
   tapList: PropTypes.array,
   currentRouterPath: PropTypes.string
-}
+};
 
 export default TapList;

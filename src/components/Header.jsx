@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Header(){
   const link = {
     textDecoration: 'none'
-  }
+  };
   return(
     <header>
       <h1>TapRoom</h1>

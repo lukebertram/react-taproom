@@ -62,8 +62,9 @@ function Tap(props){
 Tap.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  brewery: PropTypes.string,
-  alcoholContent: PropTypes.number,
+  brewery: PropTypes.string.isRequired,
+  alcoholContent: PropTypes.number.isRequired,
+  currentRouterPath: PropTypes.string,
   pintsRemaining: PropTypes.number
 };
 

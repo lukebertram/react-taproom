@@ -9,6 +9,6 @@ function AddNewTapButton(props){
 
 AddNewTapButton.propTypes = {
   onAddNewTapClick: PropTypes.func
-}
+};
 
 export default AddNewTapButton;
