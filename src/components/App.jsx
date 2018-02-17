@@ -42,6 +42,13 @@ class App extends React.Component {
         }
       ]
     }
+    this.handleAddNewTapToList = this.handleAddNewTapToList.bind(this);
+  }
+
+  handleAddNewTapToList(newTap){
+    const newMasterTapList = this.state.masterTapList.slice();
+    newMasterTapList.push(newTap);
+    this.setState({masterTapList: newMasterTapList});
   }
 
   render() {
