@@ -31,6 +31,7 @@ class Admin extends React.Component {
     if (this.state.newTapFormVisible){
       newTapForm =
       <NewTapForm
+        onAddNewTapToList={this.props.onAddNewTapToList}
         onNewTapFormSubmissionHide={this.handleNewTapFormSubmissionHide}/>;
     }
     let editTapForm = null;
@@ -56,6 +57,7 @@ class Admin extends React.Component {
 Admin.propTypes = {
   tapList: PropTypes.array,
   selectedTap: PropTypes.string,
+  onAddNewTapToList: PropTypes.func,
   currentRouterPath: PropTypes.string.isRequired
 };
 

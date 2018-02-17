@@ -78,6 +78,7 @@ class App extends React.Component {
               <Admin
                 tapList={this.state.masterTapList}
                 selectedTap={this.state.selectedTap}
+                onAddNewTapToList={this.handleAddNewTapToList}
                 currentRouterPath={props.location.pathname} />} />
           <Route path='/login' component={Login} />
           <Route component={Error404} />

@@ -9,6 +9,15 @@ function NewTapForm(props){
 
   function handleNewTapFormSubmission(event) {
     event.preventDefault();
+    props.onAddNewTapToList(
+      {
+        name: _name.value,
+        price: parseFloat(_price.value),
+        brewery: _brand.value,
+        alcoholContent: parseFloat(_alcoholContent.value),
+        pintsRemaining: 124
+      }
+    )
     _name.value = '';
     _price.value = '';
     _brand.value = '';
@@ -56,6 +65,7 @@ function NewTapForm(props){
 }
 
 NewTapForm.propTypes = {
+  onAddNewTapToList: PropTypes.func,
   onNewTapFormSubmissionHide: PropTypes.func
 }
 
